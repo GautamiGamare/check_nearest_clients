@@ -1,0 +1,78 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Locations</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+
+  		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+        </div>
+	  		<h1><a href="{% url 'main' %}" class="logo">Location Details</a></h1>
+        <ul class="list-unstyled components mb-5">
+          <li class="active">
+            <a href="{% url 'new_york' %}" class="nav-link">New york city, New york</a>
+          </li>
+          <li>
+              <a href="{% url 'boston' %}">Boston,Massachusetts</a>
+          </li>
+          <li>
+            <a href="{% url 'los_angeles' %}">Los Angeles,California</a>
+          </li>
+          <li>
+            <a href="{% url 'chicago' %}">Chicago,Illinois</a>
+          </li>
+          <li>
+            <a href="{% url 'houston' %}">Houston,Texas</a>
+          </li>
+          <li>
+            <a href="{% url 'phoenix' %}">Phoenix,Arizona</a>
+          </li>
+          <li>
+            <a href="{% url 'san_diego' %}">San Diego,California</a>
+          </li>
+          <li>
+            <a href="{% url 'dallas' %}">Dallas,Texas</a>
+          </li>
+          <li>
+            <a href="{% url 'san_jose' %}">San Jose,California</a>
+          </li>
+          <li>
+            <a href="{% url 'austin' %}">Austin,Texas</a>
+          </li>
+          <li>
+            <a href="{% url 'columbus' %}">Columbus,Ohio</a>
+          </li>
+        </ul>
+
+    	</nav>
+
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <div class="mb-4">
+          {% block locations %}
+        {% endblock %}
+        </div>
+      </div>
+		</div>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

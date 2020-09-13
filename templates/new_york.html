@@ -1,0 +1,32 @@
+{% extends 'index1.html' %}
+{% block locations %}
+<h2>Distance from New York</h2>
+<table class="table">
+    <tr>
+        <th>Employee ID</th>
+        <th>Distance</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zipcode</th>
+    </tr>
+
+    {% for y in dis %}
+    {% for x in data %}
+    {% if y.emp_id_id == x.id %}
+    <tr>
+        <td>{{ y.emp_id_id }}</td>
+        <td>{{ y.distance }}</td>
+        <td>{{ x.name }}</td>
+        <td>{{ x.address }}</td>
+        <td>{{ x.city }}</td>
+        <td>{{ x.state }}</td>
+        <td>{{ x.zipcode }}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+
+</table>
+{% endblock %}
